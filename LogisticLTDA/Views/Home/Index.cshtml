@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="~/Content/favicon-16x16.png" />
+
+<body class="bodyLogin">
+    <div class="dvconteiner min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="col-12 col-sm-8 col-md-4">
+            <form>
+                <div class="mb-3">
+                    @Html.Label("UserCfj", "CPF / Usuário", new { @class = "form-label" })
+                </div>
+                <input type="text" class="form-control" id="UserCfj" />
+
+                <button class="btn btn-primary w-100">Entrar</button>
+            </form>
+        </div>
+    </div>
+</body>
