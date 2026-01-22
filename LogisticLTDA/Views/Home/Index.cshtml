@@ -1,21 +1,53 @@
-﻿@{
+﻿@model LogisticLTDA.Models.Usuario
+
+@{
     Layout = null;
 }
 
 <link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <link rel="icon" type="image/x-icon" href="~/Content/favicon-16x16.png" />
 
 <body class="bodyLogin">
-    <div class="dvconteiner min-vh-100 d-flex justify-content-center align-items-center">
-        <div class="col-12 col-sm-8 col-md-4">
-            <form>
-                <div class="mb-3">
-                    @Html.Label("UserCfj", "CPF / Usuário", new { @class = "form-label" })
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="row w-100 justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="dvconteiner ">
+                    <div class="row justify-content-center p-4">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <div class="logo">
+                                <img src="~/Content/LogisticsLogo.png" alt="Logo da Logistica Ltda" />
+                            </div>
+                            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                            {
+                                <div class="mb-3">
+                                    @Html.LabelFor(c => c.CPF, new { @class = "form-label" })
+                                    @Html.EditorFor(c => c.CPF, new { htmlAttributes = new { @class = "form-control" } } )
+                                    @Html.ValidationMessageFor(c => c.CPF, "", new { @class = "text-danger small" })
+                                </div>
+                                <div class="mb-3">
+                                    @Html.LabelFor(s => s.Senha, new { @class = "form-label" })
+                                    @Html.PasswordFor(s => s.Senha, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(s => s.Senha, "", new { @class = "text-danger small" })
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Entrar
+                                </button>
+                            }
+                            <div class="login-footer mt-3 text-center">
+                                © Enzo Victoriano
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <input type="text" class="form-control" id="UserCfj" />
-
-                <button class="btn btn-primary w-100">Entrar</button>
-            </form>
+            </div>
         </div>
+
     </div>
+
 </body>
+
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
