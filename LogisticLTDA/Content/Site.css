@@ -1,18 +1,22 @@
 ﻿body.bodyLogin {
-    background: #020024;
-    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-    font-family: Arial, sans-serif;
     min-height: 100dvh;
+    min-width: 100vw;
+    font-family: Arial, sans-serif;
+    background: linear-gradient( rgba(11, 60, 93, 0.75), rgba(11, 60, 93, 0.75) ), url('/Content/Logistic.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 body .dvconteiner {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.92);
     width: 100%;
     padding: 0px;
     max-width: 560px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
 .logo {
     text-align: center;
     margin-bottom: 24px;
@@ -69,3 +73,58 @@ textarea {
     textarea:hover {
         border-color: #c7c9d1;
     }
+
+.barralateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 44px;
+    background: linear-gradient( rgba(11, 60, 93), rgba(11, 60, 93) );
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: ease-in-out 0.3s;
+    z-index: 1000;
+}
+
+    .barralateral:hover .menu-text {
+        opacity: 1;
+    }
+
+.menu-text {
+    opacity: 0;
+    margin-left: 10px;
+    color:white;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.itens-menu{
+    height: 100%;
+}
+
+.item-do-menu {
+    color: darkslategrey;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 7px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: ease-in-out 2s;
+}
+
+.barralateral:hover {
+    width: 150px;
+    transition: ease-in-out 1s;
+}
+
+.item-do-menu svg {
+    min-width: 24px;
+    min-height: 24px;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}

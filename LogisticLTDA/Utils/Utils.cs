@@ -8,6 +8,21 @@ namespace LogisticLTDA.Utils
 {
     public class Utils
     {
+        public static DateTime GetCurrentDate()
+        {
+            return DateTime.Now.Date;
+        }
+
+        public static TimeSpan GetCurrentTime()
+        {
+            return DateTime.Now.TimeOfDay;
+        }
+
+        public static DateTime GetCurrentDateTime()
+        {
+            return DateTime.Now;
+        }
+
         public static bool ValidarCpf(string cpf)
         {
             if (cpf.Length > 11 || cpf.Length < 11 || string.IsNullOrEmpty(cpf))

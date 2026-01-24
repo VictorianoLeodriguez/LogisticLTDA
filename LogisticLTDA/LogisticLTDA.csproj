@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Database\HomeDB.cs" />
     <Compile Include="Database\SQLHELPER.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -147,7 +148,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\favicon-16x16.png" />
-    <Content Include="Content\Logistica.jpeg" />
+    <Content Include="Content\Logistic.png" />
     <Content Include="Content\LogisticsLogo.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
